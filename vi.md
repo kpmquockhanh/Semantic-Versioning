@@ -1,17 +1,18 @@
 ### Đặc tả Semantic Versioning (SemVer)
+**Nên dịch các từ khoá**
 Những từ khóa như “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, và “OPTIONAL” trong tài liệu này đã được giải thích và mô tả trong RFC 2119.
 
 1. Phần mềm sử dụng Semantic Versioning phải khai báo 1 API công khai. API này nên được khai báo ngay trong code của nó hoặc tồn tại chặt chẽ trong tài liệu. Tuy nhiên, cuối cùng, nó nên được tóm lược và bao quát.
 
-2. Một số phiên bản thông thường phải tuân theo dạng X.Y.Z trong đó X, Y, và Z là các số không âm, và phải không bắt đầu bởi các số 0. X là phiên bản chính, Y là phiên bản nhỏ, và Z là phiên bản vá. Mỗi phẩn tử phải là các số tự tăng. Ví dụ: 1.9.0 -> 1.10.0 -> 1.11.0.
+2. Một số phiên bản thông thường phải tuân theo dạng X.Y.Z trong đó X, Y, và Z là các số không âm, và phải không bắt đầu bởi các số 0. X là phiên bản chính, Y là phiên bản phụ (nhỏ), và Z là phiên bản vá. Mỗi phẩn tử phải là các số tự tăng. Ví dụ: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 3. Khi 1 gói phiên bản được phát hành, nội dung của phiên bản đó không được phép chỉnh sửa. Mọi chỉnh sửa phải được phát hành ở 1 phiên bản mới.
 
-4. Phiên bản lớn số 0 (0.y.z) là cho khởi tạo phát triển. Mọi thứ có thể thay đổi bất cứ lúc nào. Không nên API công khai sẽ ổn định. 
+4. Phiên bản lớn là 0 (0.y.z) là cho khởi tạo phát triển. Mọi thứ có thể thay đổi bất cứ lúc nào. API công khai KHÔNG NÊN được coi là ổn định. 
 
 5. Phiên bản 1.0.0 định nghĩa 1 API công khai. Số phiên bản được tăng sau khi xuất bạn này của nó phụ thuộc vào API công khai này và nó thay đổi thế nào.
 
-6. Phiên bản vá Z(x.y.z | x > 0) phải tăng chỉ sau khi 1 bản  sửa lỗi tương thích với cái hiện tại được giới thiệu. Một sửa lỗi được định nghĩa là 1 thay đổi bện trong mà sửa những hành vi không đúng.
+6. Phiên bản vá Z(x.y.z | x > 0) phải tăng chỉ sau khi 1 bản sửa lỗi tương thích với cái hiện tại được giới thiệu. Một sửa lỗi được định nghĩa là 1 thay đổi bện trong mà sửa những hành vi không đúng.
 
 7. Phiên bản nhỏ Y (x.Y.z | x > 0) phải được tăng, nếu có 1 chức năng mới nhưng vẫn tương thích được giới thiệu đến API công khai. Nó phải được tăng nếu bất kỳ chức năng APT công khai được đánh dấu yêu cầu. Nó có thể tăng nếu 1 chức năng hay cải tiển mới được giới thiệu bên trong code riêng tư. Nó cũng có thể bao gồm các thay đổi ở mức vá. Phiên bản vá phải được đặt lại về 0 khi 1 phiên bản nhỏ được tăng.
 
